@@ -1,0 +1,371 @@
+//Colores
+
+$primary: #D8AD3D;
+$secondary: #009CD9;
+$red: #B72C2C;
+$blanco: #FFF;
+$gris: #3F454A;
+$nregro: #24272A;
+
+//letras
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../font/OpenSans-Regular.ttf);
+}
+  
+@font-face {
+    font-family: Caveat;
+    src: url(../font/Caveat-Regular.ttf);
+}
+  
+
+
+//inicio
+
+body{
+    margin: auto;
+    padding: auto;
+    background-color: $blanco;
+    width: 100%;
+    height: auto;
+}
+
+.Container{
+    display: flex;
+    flex-direction: column;
+}
+.flex-col{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.5vh;
+    margin-right: 2vh;
+}
+.header{
+    display: flex;
+    font-family: "Caveat";
+    flex-direction: column;
+}
+.imgHeader{
+    background-image: url("../img/hero.png");
+    background-size: cover;
+    height: 80vh;
+}
+.flex{
+    margin: 8vh 2vh;
+    font-family: "OpenSans";
+    display: flex;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    justify-content: space-evenly;
+}
+
+.flex-end{
+    display: flex;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    justify-content: space-between;
+    flex: auto;
+}
+
+.circle:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.circle-primary{
+    display: flex;
+    margin: auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 1vh;
+    border: 3px $primary solid;
+}
+
+.circle-secondary{
+    display: flex;
+    margin: auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 1vh;
+    border: 3px $secondary solid;
+}
+
+.circle-rojo{
+    display: flex;
+    margin: auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 1vh;
+    border: 3px $red solid;
+}
+
+.circle-primary > svg{
+    color: $primary;
+    margin: auto;
+}
+
+.circle-secondary > svg{
+    color:$secondary;
+    margin: auto;
+}
+
+.circle-rojo > svg{
+    color: $red;
+    margin: auto;
+}
+
+.header-logo{
+    font-size: 7vw;
+    color: $gris;
+    padding-left:5vw;
+    margin-top: 2vw;
+}
+
+.header-sub{
+    font-size: 8vw;
+    color: $gris;
+    padding-left:5vw;
+    margin-top: 2.5vw;
+    line-height: 6vw;
+}
+
+.container-4{
+    width: 39vw;
+}
+
+.imgResaltar{
+    position: absolute;
+    left: -37vw;
+    width: 100vw;
+    z-index: -1;
+    margin-top: 7%;
+}
+
+.Titulo{
+    display: flex;
+    place-content: center;
+}
+
+.imgAbajo{
+    position: absolute;
+    width: 40vw;
+    z-index: -1;
+    filter: opacity(0.3);
+    margin-top: 1%;
+}
+
+.font-Titulos{
+    font-size: 3.5vw;
+    color: $gris;
+    margin: auto;
+    text-align: center;
+    font-family: "Caveat";
+}
+
+.DegradadoBlanco{
+    width: 100%;
+    height: 80px;
+    position: relative;
+    top: -80px;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(252,252,252,1) 47%);
+}
+
+.Grid{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    max-width: auto;
+}
+
+.menuBusqueda{
+    display: flex;
+}
+.buttonMenu{
+    height: auto;
+    padding: 1vh;
+    font-size:smaller;
+    justify-content: space-between;
+    display: flex;
+}
+.buttonMenu.Activo{
+    color: $primary;
+}
+.buttonMenu.Activo >svg{
+    color: $primary;
+}
+.buttonMenu:hover{
+    scale: 1.02;
+    cursor: pointer;
+}
+.flex-menu{
+    box-shadow: 0px 0px 15px #00000021;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    min-width: 250px;
+    padding: 2vh;
+    border-radius: 10px;
+    max-height: 250px;
+}
+
+.cardFlex{
+    box-shadow: 0px 0px 15px #00000021;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    min-width: 280px;
+    margin: 0 20px;
+    margin-bottom: 30px;
+}
+
+.cardHeader > img{
+    width: 280px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.cardBody{
+    max-width: 250px;
+    padding: 15px;
+    word-wrap: break-word
+}
+
+.footerFormulario{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-family: "OpenSans";
+}
+
+.col-2{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+.InputCol{
+    display: flex;
+    flex-direction: column;
+}
+
+.InputCol > label{
+    font-weight: bold;
+    font-size: small;
+    margin: 5px 20px;
+}
+
+.InputCol > input{
+    border-color: $gris;
+    height: 40px;
+    width: 350px;
+    padding: 0 10px;
+    margin: 0 20px;
+    margin-bottom: 20px;
+    border-style: solid
+}
+
+.InputCol > input:focus{
+    border-color: $primary;
+}
+
+.ButtonPrimary{
+    background-color: $primary;
+    color: $blanco;
+    border-radius: 20px;
+    padding: 10px;
+    border-color: transparent;
+    font-size: x-small;
+    width: 150px;
+    cursor: pointer;
+}
+
+.ButtonPrimary:focus{
+    background-color: $gris;
+}
+
+@media only screen and (max-width: 1315px) {
+    .Grid {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+@media only screen and (max-width: 1234px) {
+    .font-Titulos{
+        font-size: 4.5vw;
+    }
+    .imgAbajo{
+        width: 50vw;
+        margin-top: 2.5%;
+    }
+}
+@media only screen and (max-width: 1076px) {
+    
+    .menuBusqueda{
+        margin: auto;
+    }    
+    .Grid {
+        grid-template-columns: repeat(1, auto);
+    }
+    .flex{
+        flex-direction: column;
+        margin: auto;
+    }
+    .menuBusqueda{
+        margin-bottom: 2vh;
+        margin-top: 4vh;
+    }
+}
+
+@media only screen and (max-width: 1015px) {
+    .col-2 {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .imgHeader{
+        background-position: unset;
+    }
+    .container-4{
+        width: auto;
+    }
+    .imgResaltar{
+        left: 0;
+    }
+    .header-sub{
+        margin: 2.5vw auto auto auto;
+        font-size: 5.5vh;
+    }
+    .imgResaltar{
+        margin-top: 1%;
+    }
+    .header-logo{
+        margin-top: 4vw;
+        font-size: 9vw;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .InputCol > input {
+        width: 250px;
+    }
+
+    .font-Titulos{
+        font-size: 8vw;
+    }
+    .imgAbajo{
+        width: 70vw;
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .header-logo{
+        margin-top: 7vw;
+        font-size: 13vw;
+    }
+}
